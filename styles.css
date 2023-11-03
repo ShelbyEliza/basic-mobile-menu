@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Space Mono', monospace;
+	--shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,
+		rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+	--color: #166e67;
+	--gap: 0.5rem;
+	--radius: 5px;
+}
+
+html,
+body {
+	min-height: 100vh;
+	margin: 0 auto;
+
+	font-size: 16px;
+	background-color: #afd8d5;
+}
+h1 {
+	text-align: center;
+}
+button:hover {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+a,
+button {
+	color: aliceblue;
+	font-size: 1rem;
+}
+.container {
+	display: flex;
+	justify-content: center;
+}
+.btn {
+	align-items: center;
+	display: flex;
+	column-gap: var(--gap);
+	padding: 0.6rem;
+	position: relative;
+	cursor: pointer;
+	background-color: #166e67;
+	box-shadow: none;
+	border: none;
+	border-radius: 0.2rem;
+}
+
+.bx {
+	font-size: 1.1rem;
+}
+.hamburger {
+	position: absolute;
+	width: 250px;
+	box-shadow: var(--shadow);
+	border-radius: var(--radius);
+	margin-top: 0.3rem;
+	background: white;
+	transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+	border: 1px solid black;
+
+	transform: translateY(0.5rem);
+	visibility: hidden;
+	opacity: 0;
+}
+
+.hamburger a {
+	display: flex;
+	align-items: center;
+	column-gap: var(--gap);
+	padding: 0.8rem 1rem;
+	text-decoration: none;
+	color: black;
+}
+
+.hamburger a:hover {
+	background-color: var(--color);
+	color: white;
+}
+
+.show {
+	transform: translateY(0rem);
+	visibility: visible;
+	opacity: 1;
+}
+
+.arrow {
+	transform: rotate(180deg);
+	transition: 0.2s ease;
+}
